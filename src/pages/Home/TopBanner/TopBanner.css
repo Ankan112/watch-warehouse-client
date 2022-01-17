@@ -1,0 +1,7 @@
+.topBanner{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.7)50%,rgba(0,0,0,0.7)50%), url('../../../img/w1.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
