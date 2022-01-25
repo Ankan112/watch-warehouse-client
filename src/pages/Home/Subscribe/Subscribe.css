@@ -1,0 +1,26 @@
+.subscribe{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9)50%,rgba(0,0,0,0.9)50%), url('../../../img/sub-2.jpg');
+    background-position: center;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    height: 50vh;
+    margin-top: 70px;
+    margin-bottom: 70px;
+
+}
+.input{
+    text-decoration: none;
+    outline: none;
+    padding:19px 20px;
+    width: 220px;
+    
+}
+.btn{
+    position: absolute;
+    top: 0;
+  right: 40px;
+    height: 57px;
+    /* border-radius: 0%; */
+    
+}

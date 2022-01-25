@@ -4,6 +4,7 @@ import Footer from '../../Common/Footer/Footer';
 
 import Products from '../Products/Products';
 import Review from '../Review/Review';
+import Subscribe from '../Subscribe/Subscribe';
 import TopBanner from '../TopBanner/TopBanner';
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
             <TopBanner></TopBanner>
             <Products></Products>
             <Review></Review>
+            <Subscribe></Subscribe>
             <Footer></Footer>
         </div>
     );

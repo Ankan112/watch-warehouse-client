@@ -3,9 +3,12 @@ import './Explore.css'
 import { useEffect, useState } from 'react';
 import { Box } from '@mui/system';
 import { Container, Grid, Typography, Button } from '@mui/material';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import useAuth from '../hooks/useAuth';
 
 const Explore = () => {
+    const { user } = useAuth();
+    const navigate = useNavigate()
     const [products, setproducts] = useState([])
     useEffect(() => {
         fetch('http://localhost:5000/products')
@@ -41,7 +44,14 @@ const Explore = () => {
                                             </Typography>
                                             <p ><strike>Regular Price:${product.regularPrice}</strike></p>
                                             <p ><b>Price:${product.price}</b></p>
-                                            <NavLink style={{ textDecoration: 'none' }} to={`/parchage/${product._id}`}> <Button sx={{ marginY: '20px' }} variant='contained'>Buy Now</Button></NavLink>
+                                            {
+                                                user.email ?
+                                                    <NavLink style={{ textDecoration: 'none' }} to={`/parchage/${product._id}`}> <Button sx={{ marginY: '20px' }} variant='contained'>Buy Now</Button></NavLink>
+                                                    :
+                                                    <Button sx={{ marginY: '20px' }} onClick={() => {
+                                                        navigate('/login')
+                                                    }} variant='contained'>Buy Now</Button>
+                                            }
 
                                         </div>
                                     </div>
