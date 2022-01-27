@@ -29,12 +29,12 @@ const MyOrders = (props) => {
     const { admin, logOut } = useAuth();
     const email = sessionStorage.getItem("email")
     useEffect(() => {
-        fetch(`http://localhost:5000/orders/${email}`)
+        fetch(`https://agile-castle-53031.herokuapp.com/orders/${email}`)
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [email])
     const handleDeleteOrder = id => {
-        const url = `http://localhost:5000/orders/${id}`
+        const url = `https://agile-castle-53031.herokuapp.com/orders/${id}`
         fetch(url, {
             method: 'DELETE'
         })

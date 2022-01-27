@@ -35,7 +35,7 @@ const MakeAdmin = (props) => {
     }
     const handleAdmin = e => {
         const user = { email };
-        fetch('http://localhost:5000/users/admin', {
+        fetch('https://agile-castle-53031.herokuapp.com/users/admin', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

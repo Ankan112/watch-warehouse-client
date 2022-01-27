@@ -39,7 +39,7 @@ const NewProduct = (props) => {
         setProductsInfo(newProductInfo)
     }
     const handleNewProduct = e => {
-        fetch('http://localhost:5000/products', {
+        fetch('https://agile-castle-53031.herokuapp.com/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

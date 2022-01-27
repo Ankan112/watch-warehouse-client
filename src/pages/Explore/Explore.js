@@ -11,7 +11,7 @@ const Explore = () => {
     const navigate = useNavigate()
     const [products, setproducts] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://agile-castle-53031.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setproducts(data))
     }, [])

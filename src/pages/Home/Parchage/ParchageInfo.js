@@ -13,7 +13,7 @@ const ParchageInfo = ({ product }) => {
         setOrder(newOrder)
     }
     const handleNewOrder = e => {
-        fetch('http://localhost:5000/orders', {
+        fetch('https://agile-castle-53031.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

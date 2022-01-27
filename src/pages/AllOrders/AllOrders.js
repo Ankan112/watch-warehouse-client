@@ -46,12 +46,12 @@ const AllOrders = (props) => {
     const { admin, logOut } = useAuth()
     const [orders, setOrders] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://agile-castle-53031.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
     const handleDeleteOrder = id => {
-        const url = `http://localhost:5000/orders/${id}`
+        const url = `https://agile-castle-53031.herokuapp.com/orders/${id}`
         fetch(url, {
             method: 'DELETE'
         })
