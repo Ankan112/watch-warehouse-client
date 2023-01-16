@@ -35,7 +35,7 @@ const MakeAdmin = (props) => {
     }
     const handleAdmin = e => {
         const user = { email };
-        fetch('https://agile-castle-53031.herokuapp.com/users/admin', {
+        fetch('https://assignment-12-node-mongodb.vercel.app/users/admin', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

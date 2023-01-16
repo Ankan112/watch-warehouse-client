@@ -39,7 +39,7 @@ const Review = (props) => {
         setReviewInfo(newReviewInfo)
     }
     const handleReview = e => {
-        fetch('https://agile-castle-53031.herokuapp.com/review', {
+        fetch('https://assignment-12-node-mongodb.vercel.app/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

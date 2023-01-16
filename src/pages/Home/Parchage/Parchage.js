@@ -7,7 +7,7 @@ const Parchage = () => {
     const { id } = useParams();
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch(`https://agile-castle-53031.herokuapp.com/product/${id}`)
+        fetch(`https://assignment-12-node-mongodb.vercel.app/product/${id}`)
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [id])

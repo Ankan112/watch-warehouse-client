@@ -39,7 +39,7 @@ const NewProduct = (props) => {
         setProductsInfo(newProductInfo)
     }
     const handleNewProduct = e => {
-        fetch('https://agile-castle-53031.herokuapp.com/products', {
+        fetch('https://assignment-12-node-mongodb.vercel.app/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -11,7 +11,7 @@ const Explore = () => {
     const navigate = useNavigate()
     const [products, setproducts] = useState([])
     useEffect(() => {
-        fetch('https://agile-castle-53031.herokuapp.com/products')
+        fetch('https://assignment-12-node-mongodb.vercel.app/products')
             .then(res => res.json())
             .then(data => setproducts(data))
     }, [])

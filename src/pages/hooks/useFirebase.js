@@ -80,7 +80,7 @@ const useFirebase = () => {
         return () => unsubscribe;
     }, [auth])
     useEffect(() => {
-        fetch(`https://agile-castle-53031.herokuapp.com/users/${user.email}`)
+        fetch(`https://assignment-12-node-mongodb.vercel.app/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
 
@@ -94,7 +94,7 @@ const useFirebase = () => {
     }
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName }
-        fetch('https://agile-castle-53031.herokuapp.com/users', {
+        fetch('https://assignment-12-node-mongodb.vercel.app/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'

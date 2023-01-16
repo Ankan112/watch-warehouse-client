@@ -46,12 +46,12 @@ const AllOrders = (props) => {
     const { admin, logOut } = useAuth()
     const [orders, setOrders] = useState([])
     useEffect(() => {
-        fetch('https://agile-castle-53031.herokuapp.com/orders')
+        fetch('https://assignment-12-node-mongodb.vercel.app/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
     const handleDeleteOrder = id => {
-        const url = `https://agile-castle-53031.herokuapp.com/orders/${id}`
+        const url = `https://assignment-12-node-mongodb.vercel.app/orders/${id}`
         fetch(url, {
             method: 'DELETE'
         })

@@ -13,7 +13,7 @@ const ParchageInfo = ({ product }) => {
         setOrder(newOrder)
     }
     const handleNewOrder = e => {
-        fetch('https://agile-castle-53031.herokuapp.com/orders', {
+        fetch('https://assignment-12-node-mongodb.vercel.app/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

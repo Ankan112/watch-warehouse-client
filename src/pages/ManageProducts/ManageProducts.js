@@ -25,13 +25,13 @@ const ManageProducts = (props) => {
     };
     const [products, setproducts] = useState([])
     useEffect(() => {
-        fetch('https://agile-castle-53031.herokuapp.com/products')
+        fetch('https://assignment-12-node-mongodb.vercel.app/products')
             .then(res => res.json())
             .then(data => setproducts(data))
     }, [])
     const handleDeleteProduct = id => {
 
-        const url = `https://agile-castle-53031.herokuapp.com/products/${id}`;
+        const url = `https://assignment-12-node-mongodb.vercel.app/products/${id}`;
         fetch(url, {
             method: 'DELETE'
         })
